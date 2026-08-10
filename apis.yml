@@ -1,8 +1,21 @@
 aid: circular-genomics
 name: Circular Genomics
-description: 'Circular Genomics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Circular Genomics is a San Diego, California precision-neurology diagnostics
+  company that uses brain-derived circular RNA (circRNA) as a class of stable, blood-based
+  biomarkers for psychiatric and neurological disease. Spun out of the University of
+  New Mexico in 2021 and now resident at Lilly Gateway Labs in San Diego, the company
+  builds CircPath, a proprietary molecular-intelligence platform that discovers, validates
+  and translates circRNA signals into biological insight, and productizes it as research
+  and clinical assays: Discover 1600+ (whole-transcriptome circRNA sequencing across
+  1,600+ brain-derived circRNAs with pathway-level analysis), AD Predict and AD Detect
+  for Alzheimer''s disease, and MindLight, an SSRI antidepressant response test for
+  major depressive disorder. Test ordering and results delivery for licensed healthcare
+  providers run through a login-gated provider portal at mindlight.circulargenomics.com,
+  which is a white-labeled CrelioHealth laboratory information system rather than a
+  first-party developer surface. Circular Genomics publishes no public API, SDK, webhook
+  or developer documentation of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/circular-genomics/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/69f294bcc4f8261224416905/6a5e4d5072472bd95c583d2f_Circular%20Genomics%20Monogram%401x.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +25,15 @@ created: '2026-08-09'
 modified: '2026-08-09'
 tags:
 - Company
+- Biotechnology
+- Diagnostics
+- Genomics
+- Precision Medicine
+- Neurology
+- Life Sciences
+- Health
+- Clinical Laboratory
+- Biomarkers
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,67 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/circular-genomics-domain-security.yml
+- type: LLMsTxt
+  url: llms/circular-genomics-llms.txt
 - type: Website
+  url: https://www.circulargenomics.com/
+- type: About
+  url: https://www.circulargenomics.com/about
+- type: Products
+  url: https://www.circulargenomics.com/products
+- type: Blog
+  url: https://www.circulargenomics.com/news
+- type: Contact
+  url: https://www.circulargenomics.com/contact
+- type: Partners
+  url: https://www.circulargenomics.com/partnerships
+- type: Publications
+  url: https://www.circulargenomics.com/publications-resources
+- type: Careers
+  url: https://www.circulargenomics.com/careers
+- type: TermsOfService
+  url: https://www.circulargenomics.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.circulargenomics.com/privacy
+- type: CookiePolicy
+  url: https://www.circulargenomics.com/cookie-policy
+- type: ProviderPortal
+  url: https://mindlight.circulargenomics.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/circulargenomics
+- type: Twitter
+  url: https://x.com/CircGenomics
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/circular-genomics
+- type: SecondaryMarket
   url: https://forgeglobal.com/circular-genomics_stock/
+x-enrichment:
+  date: '2026-08-09'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Circular Genomics ships clinical circRNA assays, not software — its only logged-in
+    surface, the MindLight provider portal at mindlight.circulargenomics.com, is a
+    white-labeled CrelioHealth LIS (the response carries `server: Crelio`) for test
+    ordering by licensed clinicians, and every spec, /.well-known/ and developer path
+    probed on both company hosts returned 404.
+  evidence:
+  - url: https://www.circulargenomics.com/openapi.json
+    status: 404
+  - url: https://www.circulargenomics.com/developers
+    status: 404
+  - url: https://mindlight.circulargenomics.com/openapi.json
+    status: 404
+  - url: https://mindlight.circulargenomics.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.circulargenomics.com/sitemap.xml
+    status: 200
+  - url: https://api.github.com/users/circular-genomics/repos
+    status: 200
+  checked: '2026-08-09'
