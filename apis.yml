@@ -26,6 +26,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/69f294bcc4f8261224416905/6a5e4d5072472bd95c583d2f_Circular%20Genomics%20Monogram%401x.png
 x-type: company
 x-source: harvest:secondary-market
